@@ -1,6 +1,5 @@
-
-
 <link rel="icon" href="https://lh3.googleusercontent.com/a/ACg8ocIgxkQjQPEAidftePdKe5A5gvGHmCa4K1enwN8QAFbMjbLO6dE=s576-c-no">
+<button onclick="A()" id="cn" style="background-color:yellow;position:absolute;right:0;color:red;">登录</button>
 <title>下载xuos.hpp</title>
 <body style="background-color:red;">
 	<h1 style="color:lime;">下载xuos.hpp</h1>
@@ -14,6 +13,30 @@ xuos.hpp是c++在线编辑器开发者的一个很好的工具
 要不要下载?<br>
 <code style="color:yellow">在此下载:<a href="https://v4-1.xushi-1009.cc/xuos.hpp" download>下载</a></code><br>
 <img src="https://lh3.googleusercontent.com/a/ACg8ocIgxkQjQPEAidftePdKe5A5gvGHmCa4K1enwN8QAFbMjbLO6dE=s576-c-no" width="100px" height="100px"><br>
-	<button onclick="alert('1.0.0')">显示版本</button><br>
-	<b style="color:green">&copy;:xushi&reg;[保留所有权利]</b>	
+	<button onclick="alert('v1.0.0')">显示版本</button><br>
+	<b style="color:green">&copy;:xushi&reg;[保留所有权利]</b><br>
+	<span id="cc"></span>
 </body>
+<script>
+let key=localStorage.getItem("key");
+if(key!=""){
+	document.getElementById("cn").onclick=C;
+}else{
+	document.getElementById("cn").onclick=A;
+}
+function A(){
+	let a=document.getElementById("cc");
+	a.innerHTML="<input id='aa'><button onclick='B()'>登录</button>";
+}
+function B(){
+	let a=document.getElementById("aa").value;
+	localStorage.setItem("key",a);
+	document.getElementById("cn").onclick=C;
+	alert("欢迎登录,"+a);
+	document.getElementById("cc").innerHTML="";
+}
+function C(){
+	let a=localStorage.getItem("key");
+	alert("欢迎回来,"+a);
+}
+</script>
