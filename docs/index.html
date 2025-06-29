@@ -18,12 +18,14 @@ xuos.hpp是c++在线编辑器开发者的一个很好的工具
 	<span id="cc"></span>
 </body>
 <script>
+window.onload=()=>{
 let key=localStorage.getItem("key");
-if(key!=""){
+if(key!=""&&key!=null){
 	document.getElementById("cn").onclick=C;
 }else{
 	document.getElementById("cn").onclick=A;
 }
+};
 function A(){
 	let a=document.getElementById("cc");
 	a.innerHTML="<input id='aa'><button onclick='B()'>登录</button>";
