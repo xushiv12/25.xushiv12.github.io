@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body{
+	background-color:lime;
+	}
+#a{
+	width:200px;
+	height:100%;
+	left:0;top:0;
+	position:absolute;
+	background-color:black;
+	text-align:center;
+	}
+input{
+	background-color:yellow;
+	color:blue;
+	}
+.a{
+	left:230px;top:0;
+	position:relative;
+	}
+</style>
+<title>下载xuos.hpp|xushi|EDA1.0</title>
+<link rel="icon" href="https://lh3.googleusercontent.com/a/ACg8ocIgxkQjQPEAidftePdKe5A5gvGHmCa4K1enwN8QAFbMjbLO6dE=s576-c-no">
+</head>
+<body>
+	<div id="a">
+		<h1 style="color:red">menu</h1>
+	<input onclick="A()" type="button" value="打印"><br><br><br><br><br>
+	<input onclick="B()" type="button" value="帮助"><br><br><br><br><br>
+	<input onclick="C()" type="button" value="提交输入"><br><br><br><br><br>
+	<input onclick="alert('v1.0.0')" type="button" value="版本"><br><br><br><br><br>
+	</div>	
+	<span class="a">
+		<h1>xushi EDA v1.0</h1>
+		<h2>EDA</h2>
+		<input id="ipt"><br>
+		<p id="sw">
+		</p>
+	</span>
+<script>
+function npn(href){
+	let a=`
+    B<img src="https://tse1.mm.bing.net/th/id/OIP.VARw7kXtalkB4qbB2cFMNAHaI2?w=474&h=474&c=7" width="20px" height="20px"><br>&nbsp;<img src="${href}" width="20" height="20"><br>
+    `;
+	return a;
+}
+function Bexxx(nb){
+	let a="";
+	if(nb===0){
+		a="https://www.runoob.com/images/pic_bulboff.gif";
+	}else if(nb===1){
+		a="https://www.runoob.com/images/pic_bulbon.gif";
+	}
+	return a;
+}
+function crt(xx){
+	let a=Number(xx);
+	let len=xx.length-1;
+	let c1=npn(Bexxx(0));
+	let c2=npn(Bexxx(1));
+	document.getElementById("sw").innerHTML="&nbsp;&nbsp;&nbsp;&nbsp;+<br>&nbsp;&nbsp;&nbsp;&nbsp;|<br>";
+	for(let i=0;i<=len;i++){
+		switch(xx[i]){
+			case '0':
+				document.getElementById("sw").innerHTML+=c1;
+				break;
+		    case '1':
+				document.getElementById("sw").innerHTML+=c2;
+				break;
+		}
+	}
+	document.getElementById("sw").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;|<br>&nbsp;&nbsp;&nbsp;&nbsp;-";
+}
+function A(){
+	var win=window.open("about:blank","_blank");
+	var a=document.getElementById("sw").innerHTML;
+	win.document.write(`${a}<script>window.print<\/script>`);
+}
+function B(){
+	alert("帮助功能暂且没有");
+}
+function C(){
+	let i=0;
+	var c="";
+	var a=document.getElementById("ipt").value;
+	while(i<=a.length){
+		let b=a.charCodeAt(i);
+	    c+=b.toString(2);
+		i++;
+	}
+	crt(c);
+}
+</script>
+</body>
+</html>
