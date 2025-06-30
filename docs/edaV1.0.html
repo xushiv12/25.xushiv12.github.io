@@ -77,15 +77,14 @@ function crt(xx){
 	document.getElementById("sw").innerHTML+="&nbsp;&nbsp;&nbsp;&nbsp;|<br>&nbsp;&nbsp;&nbsp;&nbsp;-";
 }
 function A(){
-	var win=window.open("about:blank","_blank");
-	var a=document.getElementById("sw").innerHTML;
-	win.document.write(`${a}<script>window.print();<\/script>`);
+	let a=document.getElementById("sw").innerHTML;
+	document.write(`${a}<script>window.print();<\/script>`);
 }
 function B(){
 	alert("帮助功能暂且没有");
 }
 function C(){
-	let i=0;
+	var i=0;
 	var c="";
 	var a=document.getElementById("ipt").value;
 	while(i<=a.length){
