@@ -79,7 +79,7 @@ function crt(xx){
 function A(){
 	var win=window.open("about:blank","_blank");
 	var a=document.getElementById("sw").innerHTML;
-	win.document.write(`${a}<script>window.print<\/script>`);
+	win.document.write(`${a}<script>window.print();<\/script>`);
 }
 function B(){
 	alert("帮助功能暂且没有");
